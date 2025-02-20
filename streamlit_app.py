@@ -85,11 +85,6 @@ Answer in JSON format with keys “initial_sentiment”, “change_in_sentiment�
             except Exception as err:
                 messages.append({"role": message["role"], "content": message["content"]})
         
-        #messages += [
-        #    {"role": m["role"], "content": m["content"]}
-        #    for m in st.session_state.messages
-        #]
-
         # Generate a response using the OpenAI API.
         ai_response = client.chat.completions.create(
             model="gpt-4o-mini",
